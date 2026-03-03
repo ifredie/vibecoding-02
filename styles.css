@@ -1,2 +1,233 @@
-body { background-color: #1a1a1a; color: #fff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-#app { background-color: #333; padding: 20px; border-radius: 8px; text-align: center; }
+/* Tema Monocromático: Negro completo, grises y blanco */
+:root {
+    --bg-color: #050505;
+    --text-color: #f7f7f7;
+    --accent-color: #1c1c1c;
+    --border-color: #2b2b2b;
+    --font-heading: 'Anton', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    background: rgba(5, 5, 5, 0.85);
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tipografía Grande para Logo y Headers */
+.logo {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #666666;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 80%);
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    /* Tipografía extremadamente grande responsiva */
+    font-size: clamp(5rem, 16vw, 15rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 300;
+    letter-spacing: 4px;
+    max-width: 800px;
+    color: #b0b0b0;
+    margin-bottom: 4rem;
+}
+
+/* Botón Interactivo */
+.play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: 2px solid var(--text-color);
+    padding: 1.2rem 3rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    align-self: flex-start;
+}
+
+.play-btn:hover {
+    transform: translateY(-5px);
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.btn-icon {
+    font-size: 1.4rem;
+}
+
+/* Texto de contexto SEO */
+.seo-text {
+    padding: 6rem 5%;
+    background-color: var(--accent-color);
+}
+
+.seo-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+}
+
+.seo-text p {
+    font-size: 1.2rem;
+    color: #a3a3a3;
+    max-width: 900px;
+    line-height: 1.8;
+}
+
+/* Stations */
+.stations {
+    padding: 8rem 5%;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 10vw, 7rem);
+    margin-bottom: 5rem;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.station-card {
+    background: var(--accent-color);
+    padding: 4rem 3rem;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.5s ease, background 0.3s ease;
+    cursor: default;
+}
+
+.station-card:hover {
+    transform: translateY(-15px);
+    background: #252525;
+}
+
+.station-card h3 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.station-card p {
+    color: #999999;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+/* Footer */
+.footer {
+    padding: 6rem 5% 4rem;
+    background: #000000;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.footer p {
+    color: #888888;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.copyright {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    color: #555555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+}
