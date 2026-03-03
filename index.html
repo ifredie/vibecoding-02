@@ -35,75 +35,113 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <header class="header">
+<header class="header">
+    <div class="header-inner">
+        <div class="logo">GRG.</div>
         <nav class="nav">
-            <div class="logo">GRG.</div>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
                 <li><a href="#emisoras">Emisoras</a></li>
-                <li><a href="#noticias">Noticias</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </header>
+        <a href="#signup" class="btn-signup">Sign up</a>
+    </div>
+</header>
 
-    <main>
-        <!-- Sección Hero principal -->
-        <section class="hero">
-            <h1 class="hero-title">SONAMOS<br>MÁS FUERTE</h1>
-            <p class="hero-subtitle">EL GRUPO RADIAL LÍDER EN GUATEMALA. 24/7 EN VIVO PARA TODO EL PAÍS Y EL MUNDO.</p>
-            <button id="play-btn" class="play-btn" aria-label="Reproducir Radio en Vivo">
-                <span class="btn-text">ESCUCHAR LA VOZ GT</span>
-                <span class="btn-icon">▶</span>
-            </button>
-        </section>
+<main>
+    <!-- Sección Hero principal -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Siente la Música.<br>Vive cada Momento.</h1>
+            <p class="hero-subtitle">Noticias, entretenimiento. El Grupo Radial número uno transmite 24/7 sin
+                interrupciones para llevarte el ritmo a donde estés.</p>
 
-        <!-- Sección descriptiva optimizada para SEO (H2) -->
-        <section class="seo-text dark-section">
-            <div class="container">
-                <h2>La Mejor Radio de Guatemala a tu Alcance</h2>
-                <p>Si buscas las mejores <stron>emisoras y radios locales en Guatemala</stron>, en el Grupo Radial
-                    Guatemala (GRG) transmitimos continuamente los hits más recientes, los clásicos inolvidables y las
-                    noticias más relevantes a nivel nacional e internacional. Conéctate y sé parte de nuestra comunidad
-                    radial.</p>
+            <div class="hero-actions">
+                <button id="play-btn" class="btn-primary" aria-label="Reproducir Radio en Vivo">Escuchar en
+                    Vivo</button>
+                <a href="#emisoras" class="btn-text">Ver Emisoras</a>
             </div>
-        </section>
 
-        <!-- Tarjetas interactivas de las estaciones -->
-        <section id="emisoras" class="stations">
-            <h2 class="section-title">NUESTRAS EMISORAS</h2>
-            <div class="grid">
-                <article class="station-card">
-                    <div class="card-icon">🎙️</div>
-                    <h3>LA VOZ GT</h3>
-                    <p>Noticias, análisis debatiendo la realidad del país y coberturas en vivo a nivel departamental y
-                        nacional en Guatemala.</p>
-                </article>
-                <article class="station-card">
-                    <div class="card-icon">🎧</div>
-                    <h3>URBANA GT</h3>
-                    <p>Los grandes éxitos urbanos y el flow que domina las listas musicales. Reggaeton, dembow y más.
-                    </p>
-                </article>
-                <article class="station-card">
-                    <div class="card-icon">🎵</div>
-                    <h3>CLÁSICA 80s/90s</h3>
-                    <p>La máxima selección musical del rock y el pop de todos los tiempos. Recuerdos y melancolía
-                        garantizados.</p>
-                </article>
+            <div class="hero-features">
+                <div class="feature">
+                    <div class="feature-icon">🎙️</div>
+                    <span class="feature-text">Señal<br>HD</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎧</div>
+                    <span class="feature-text">Audio<br>Envolvente</span>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <span class="feature-text">Cobertura<br>Nacional</span>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
 
-    <footer id="contacto" class="footer">
-        <h2>CONECTA CON NOSOTROS</h2>
-        <p>10a Avenida, Zona 10, Ciudad de Guatemala, Guatemala.</p>
-        <p>Email: contacto@ejemplo-radial.gt | Teléfono: +502 2222-2222</p>
-        <br>
-        <p class="copyright">&copy; 2026 Grupo Radial Guatemala. Todos los derechos reservados.</p>
-    </footer>
+        <div class="hero-gallery">
+            <!-- Rejilla de fotos para simular las imágenes de referencia -->
+            <div class="gallery-item large">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Micrófono y estudio de radio">
+            </div>
+            <div class="gallery-item small-top">
+                <img src="https://images.unsplash.com/photo-1516280440502-a2f7c006d600?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Equipos de audio">
+            </div>
+            <div class="gallery-item small-bottom">
+                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                    alt="Tocadiscos y vinilos">
+            </div>
+        </div>
+    </section>
 
-    <script src="app.js"></script>
+    <!-- Sección descriptiva optimizada para SEO (H2) -->
+    <section class="seo-text dark-section">
+        <div class="container">
+            <h2>La Mejor Radio de Guatemala a tu Alcance</h2>
+            <p>Si buscas las mejores <stron>emisoras y radios locales en Guatemala</stron>, en el Grupo Radial
+                Guatemala (GRG) transmitimos continuamente los hits más recientes, los clásicos inolvidables y las
+                noticias más relevantes a nivel nacional e internacional. Conéctate y sé parte de nuestra comunidad
+                radial.</p>
+        </div>
+    </section>
+
+    <!-- Tarjetas interactivas de las estaciones -->
+    <section id="emisoras" class="stations">
+        <h2 class="section-title">NUESTRAS EMISORAS</h2>
+        <div class="grid">
+            <article class="station-card">
+                <div class="card-icon">🎙️</div>
+                <h3>LA VOZ GT</h3>
+                <p>Noticias, análisis debatiendo la realidad del país y coberturas en vivo a nivel departamental y
+                    nacional en Guatemala.</p>
+            </article>
+            <article class="station-card">
+                <div class="card-icon">🎧</div>
+                <h3>URBANA GT</h3>
+                <p>Los grandes éxitos urbanos y el flow que domina las listas musicales. Reggaeton, dembow y más.
+                </p>
+            </article>
+            <article class="station-card">
+                <div class="card-icon">🎵</div>
+                <h3>CLÁSICA 80s/90s</h3>
+                <p>La máxima selección musical del rock y el pop de todos los tiempos. Recuerdos y melancolía
+                    garantizados.</p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer id="contacto" class="footer">
+    <h2>CONECTA CON NOSOTROS</h2>
+    <p>10a Avenida, Zona 10, Ciudad de Guatemala, Guatemala.</p>
+    <p>Email: contacto@ejemplo-radial.gt | Teléfono: +502 2222-2222</p>
+    <br>
+    <p class="copyright">&copy; 2026 Grupo Radial Guatemala. Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
 </body>
 
 </html>
